@@ -12,25 +12,31 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#
-# This file is the build configuration for a full Android
-# build for maguro hardware. This cleanly combines a set of
-# device-specific aspects (drivers) with a device-agnostic
-# product configuration (apps). Except for a few implementation
-# details, it only fundamentally contains two inherit-product
-# lines, full and maguro, hence its name.
-#
+# Exclude Live Wallpapers
+TARGET_EXCLUDE_LIVEWALLPAPERS := true
 
-# Inherit from those products. Most specific first.
+# Use the AOSP browser
+TARGET_USES_AOSP_BROWSER := true
+
+# Bootanimation
+TARGET_BOOTANIMATION_SIZE := 720x407
+
+# Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
-# This is where we'd set a backup provider if we had one
-#$(call inherit-product, device/sample/products/backup_overlay.mk)
+
+# Inherit APNs list
+$(call inherit-product, vendor/omni/config/gsm.mk)
+
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/omni/config/common.mk)
+
 # Inherit from maguro device
 $(call inherit-product, device/samsung/maguro/device.mk)
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := full_maguro
+PRODUCT_NAME := omni_maguro
 PRODUCT_DEVICE := maguro
-PRODUCT_BRAND := Android
-PRODUCT_MODEL := AOSP on Maguro
+PRODUCT_BRAND := Google
+PRODUCT_MODEL := Galaxy Nexus
+PRODUCT_MANUFACTURER := Samsung
 PRODUCT_RESTRICT_VENDOR_FILES := false
