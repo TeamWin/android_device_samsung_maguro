@@ -12,9 +12,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Use the non-open-source part, if present
--include vendor/samsung/maguro/BoardConfigVendor.mk
-
 # Use the part that is common between all tunas
 include device/samsung/tuna/BoardConfig.mk
-
