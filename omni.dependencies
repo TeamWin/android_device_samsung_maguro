@@ -3,6 +3,6 @@
     "remote": "omnirom",
     "repository": "android_device_samsung_tuna",
     "target_path": "device/samsung/tuna",
-    "revision": "android-6.0"
+    "revision": "android-7.1"
   }
 ]
