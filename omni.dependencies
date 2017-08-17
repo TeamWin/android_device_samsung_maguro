@@ -1,38 +1,8 @@
 [
   {
     "remote": "omnirom",
-    "repository": "android_hardware_ti_omap4",
-    "target_path": "hardware/ti/omap4",
-    "revision": "android-6.0"
-  },
-  {
-    "remote": "omnirom",
-    "repository": "android_kernel_samsung_tuna",
-    "target_path": "kernel/samsung/tuna",
-    "revision": "android-6.0"
-  },
-  {
-    "remote": "omnirom",
     "repository": "android_device_samsung_tuna",
     "target_path": "device/samsung/tuna",
     "revision": "android-6.0"
-  },
-  {
-    "remote": "omnirom",
-    "repository": "android_prebuilts_gcc_linux-x86_arm_arm-eabi-4.7",
-    "target_path": "prebuilts/gcc/linux-x86/arm/arm-eabi-4.7",
-    "revision": "android-6.0"
-  },
-  {
-    "remote": "omnirom",
-    "repository": "android_prebuilts_gcc_darwin-x86_arm_arm-eabi-4.7",
-    "target_path": "prebuilts/gcc/darwin-x86/arm/arm-eabi-4.7",
-    "revision": "android-6.0"
-  },
-  {
-    "remote": "omnirom",
-    "repository": "android_packages_apps_Nfc",
-    "target_path": "packages/apps/Nfc-nxp",
-    "revision": "android-6.0-nxp"
   }
 ]
